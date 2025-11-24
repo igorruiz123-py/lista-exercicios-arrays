@@ -74,11 +74,10 @@ int main(){
 
         // Verificação para saber se o nome informado pelo usuário existe no array
         for (int i = 0; i < 5; i++){
-            for (int j = 0; Names[i][j] != '\0'; j++){
-                    if (UserName[j] == Names[i][j]){
-                        UserNameFound = true;
-                        Target = i;
-                    }
+                if (strcmp(UserName, Names[i]) == 0){
+                    UserNameFound = true;
+                    Target  = i;
+                    break;
                 }
             }
         
